@@ -43,6 +43,8 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, DetailsActivity.class);
+                int size = recipes.get(position).getIngredients().size();
+                System.out.println(size);
                 intent.putExtra(Constants.RECIPE_PARCABLE, recipes.get(position));
                 context.startActivity(intent);
             }

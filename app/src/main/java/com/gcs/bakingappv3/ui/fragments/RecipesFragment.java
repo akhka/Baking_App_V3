@@ -76,10 +76,6 @@ public class RecipesFragment extends Fragment {
     }
 
 
-    public void addItem(Recipe recipe){
-        recipes.add(recipe);
-    }
-
     public void updateData(){
         adapter.notifyDataSetChanged();
     }
