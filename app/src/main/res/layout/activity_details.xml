@@ -16,10 +16,23 @@
         android:layout_below="@id/details_toolbar"
         android:padding="5dp">
 
-        <include
-            android:id="@+id/ingredient_display"
-            layout="@layout/ingrediants_layout"/>
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <include
+               android:id="@+id/ingredient_display"
+               layout="@layout/ingrediants_layout" />
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/ingredient_display"
+               android:background="@android:color/darker_gray"/>
+
+       </RelativeLayout>
 
     </ScrollView>
+
 
 </RelativeLayout>
