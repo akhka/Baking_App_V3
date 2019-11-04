@@ -8,4 +8,6 @@
     <string name="measure">Measure:</string>
     <string name="ingredient">Ingredient:</string>
     <string name="short_description">Short Description</string>
+    <string name="steps">STEPS</string>
+    <string name="ingredients">INGREDIENTS</string>
 </resources>
