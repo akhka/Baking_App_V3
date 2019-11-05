@@ -12,11 +12,19 @@
         layout="@layout/main_toolbar"/>
 
     <FrameLayout
+        android:id="@+id/videoPlayer_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="10"/>
+        android:layout_weight="3"/>
 
     <FrameLayout
+        android:id="@+id/step_details_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"/>
+
+    <FrameLayout
+        android:id="@+id/step_nav_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>

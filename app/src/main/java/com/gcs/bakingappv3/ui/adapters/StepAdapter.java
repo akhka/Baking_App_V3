@@ -43,6 +43,8 @@ public class StepAdapter extends RecyclerView.Adapter<StepAdapter.ViewHolder> {
             public void onClick(View v) {
                 Intent intent = new Intent(context, StepDetailsActivity.class);
                 intent.putExtra(Constants.STEP_PARCABLE, steps.get(position));
+                int stepNumber = position+1;
+                intent.putExtra("position", stepNumber);
                 context.startActivity(intent);
             }
         });
