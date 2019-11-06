@@ -2,6 +2,7 @@ package com.gcs.bakingappv3.ui.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar mainToolbar;
     private FrameLayout recipes_container;
     private RecipesFragment recipeFragment;
+
 
     // This just for test
     /*@Override
@@ -52,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
         recipes_container = findViewById(R.id.recipes_rv_container);
         recipeFragment = new RecipesFragment();
         getSupportFragmentManager().beginTransaction().add(R.id.recipes_rv_container, recipeFragment).commit();
-
 
 
     }

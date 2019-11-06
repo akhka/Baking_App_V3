@@ -10,6 +10,8 @@ import android.widget.FrameLayout;
 import com.gcs.bakingappv3.R;
 import com.gcs.bakingappv3.data.models.Step;
 import com.gcs.bakingappv3.ui.fragments.ExoPlayerFragment;
+import com.gcs.bakingappv3.ui.fragments.NoVideoFragment;
+import com.gcs.bakingappv3.ui.fragments.StepDetailsFragment;
 import com.gcs.bakingappv3.utils.Constants;
 
 public class StepDetailsActivity extends AppCompatActivity {
@@ -22,6 +24,8 @@ public class StepDetailsActivity extends AppCompatActivity {
     private FrameLayout stepNav_container;
 
     private ExoPlayerFragment exoFragment;
+    private NoVideoFragment novideoFragment;
+    private StepDetailsFragment stepFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +52,18 @@ public class StepDetailsActivity extends AppCompatActivity {
         stepDetails_container = findViewById(R.id.step_details_container);
         stepNav_container = findViewById(R.id.step_nav_container);
 
-        exoFragment = new ExoPlayerFragment();
-        exoFragment.setVideoUrl(step.getVideoURL());
-        getSupportFragmentManager().beginTransaction().add(R.id.videoPlayer_container, exoFragment).commit();
+        if (step.getVideoURL().equals("")){
+            novideoFragment = new NoVideoFragment();
+            getSupportFragmentManager().beginTransaction().add(R.id.videoPlayer_container, novideoFragment).commit();
+        }
+        else{
+            exoFragment = new ExoPlayerFragment();
+            exoFragment.setVideoUrl(step.getVideoURL());
+            getSupportFragmentManager().beginTransaction().add(R.id.videoPlayer_container, exoFragment).commit();
+        }
+
+        stepFragment = new StepDetailsFragment();
+        stepFragment.setFullDescription(step.getDescription());
+        getSupportFragmentManager().beginTransaction().add(R.id.step_details_container, stepFragment).commit();
     }
 }

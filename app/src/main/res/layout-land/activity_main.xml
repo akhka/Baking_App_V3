@@ -5,18 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
-    tools:context=".ui.activities.MainActivity">
+    tools:context=".ui.activities.MainActivity" >
+
+    <include
+        android:id="@+id/main_toolbar"
+        layout="@layout/main_toolbar"/>
 
     <FrameLayout
         android:id="@+id/recipes_rv_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/main_toolbar"
-        android:background="@color/backgroundColor" />
-
-    <include
-        android:id="@+id/main_toolbar"
-        layout="@layout/main_toolbar" />
+        android:background="@color/backgroundColor"/>
 
 
 </RelativeLayout>

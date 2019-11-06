@@ -4,6 +4,7 @@ package com.gcs.bakingappv3.ui.fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -38,7 +39,12 @@ public class IngredietFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_ingrediet, container, false);
         ingredient_rv = view.findViewById(R.id.ingredient_rv);
         ingredientAdapter = new IngredientAdapter(getContext(), ingredients);
-        ingredient_rv.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        if (getContext().getResources().getBoolean(R.bool.isLand) == true){
+            ingredient_rv.setLayoutManager(new GridLayoutManager(getContext(), 1));
+        }
+        else {
+            ingredient_rv.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        }
         ingredient_rv.setAdapter(ingredientAdapter);
         updateData();
         return view;
