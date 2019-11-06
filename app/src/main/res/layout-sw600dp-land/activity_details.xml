@@ -44,7 +44,7 @@
                     android:gravity="center"
                     android:text="@string/ingredients"
                     android:textColor="@color/titleRed"
-                    android:textSize="16sp"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
 
@@ -73,7 +73,7 @@
                     android:gravity="center"
                     android:text="@string/steps"
                     android:textColor="@color/titleRed"
-                    android:textSize="16sp"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <FrameLayout

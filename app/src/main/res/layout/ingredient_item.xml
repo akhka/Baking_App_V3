@@ -23,11 +23,11 @@
             android:padding="5dp">
 
             <TextView
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
                 android:text="@string/ingredient"
                 android:textColor="@android:color/black"
-                android:textSize="18sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -38,7 +38,7 @@
                 android:layout_marginRight="2dp"
                 android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="30sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -47,11 +47,11 @@
             android:padding="5dp">
 
             <TextView
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
                 android:text="@string/measure"
                 android:textColor="@android:color/black"
-                android:textSize="18sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -62,7 +62,7 @@
                 android:layout_marginRight="2dp"
                 android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="30sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -71,11 +71,11 @@
             android:padding="5dp">
 
             <TextView
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
                 android:text="@string/quantity"
                 android:textColor="@android:color/black"
-                android:textSize="18sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -86,7 +86,7 @@
                 android:layout_marginRight="2dp"
                 android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="30sp" />
         </LinearLayout>
 
     </LinearLayout>
